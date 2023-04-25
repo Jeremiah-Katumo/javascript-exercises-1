@@ -1,25 +1,25 @@
-const {convertToCelsius, convertToFahrenheit} = require('./tempConversion')
+const {convertToCelsius, convertToFahrenheit} = require('./tempConversion');
 
 describe('convertToCelsius', () => {
   test('works', () => {
-    expect(convertToCelsius(32)).toEqual(0);
+    expect(convertFahrenheitToCelsius(32)).toEqual(0);
   });
-  test.skip('rounds to 1 decimal', () => {
-    expect(convertToCelsius(100)).toEqual(37.8);
+  test('rounds to 1 decimal', () => {
+    expect(convertFahrenheitToCelsius(100)).toEqual(37.8);
   });
-  test.skip('works with negatives', () => {
-    expect(convertToCelsius(-100)).toEqual(-73.3);
+  test('works with negatives', () => {
+    expect(convertFahrenheitToCelsius(-100)).toEqual(-73.3);
   });
 });
 
 describe('convertToFahrenheit', () => {
-  test.skip('works', () => {
-    expect(convertToFahrenheit(0)).toEqual(32);
+  test('works', () => {
+    expect(convertCelsiusToFahrenheit(0)).toEqual(32);
   });
-  test.skip('rounds to 1 decimal', () => {
-    expect(convertToFahrenheit(73.2)).toEqual(163.8);
+  test('rounds to 1 decimal', () => {
+    expect(convertCelsiusToFahrenheit(73.2)).toEqual(163.8);
   });
-  test.skip('works with negatives', () => {
-    expect(convertToFahrenheit(-10)).toEqual(14);
+  test('works with negatives', () => {
+    expect(convertCelsiusToFahrenheit(-10)).toEqual(14);
   });
 });
